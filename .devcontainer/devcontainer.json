@@ -1,50 +1,50 @@
 {
-  "name": "LEMP Development",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "workspace",
-  "workspaceFolder": "/workspaces",
-  "mounts": [
-    "source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.ssh/,target=/home/vscode/.ssh/,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
-  ],
-  "forwardPorts": [
-    8080,
-    3306,
-    9000
-  ],
-  "customizations": {
-    "vscode": {
-      "[php]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-      },
-      "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/*.code-search": true,
-        "**/vendor/*/**": true
-      },
-      "extensions": [
-        "xdebug.php-debug",
-        "bmewburn.vscode-intelephense-client",
-        "zobo.php-intellisense",
-        "neilbrayfield.php-docblocker",
-        "MehediDracula.php-namespace-resolver",
-        "onecentlin.laravel-blade",
-        "onecentlin.laravel5-snippets",
-        "ryannaddy.laravel-artisan",
-        "amiralizadeh9480.laravel-extra-intellisense",
-        "mikestead.dotenv",
-        "PKief.material-icon-theme",
-        "streetsidesoftware.code-spell-checker",
-        "cweijan.vscode-database-client2",
-        "donjayamanne.githistory",
-        "eamodio.gitlens",
-        "rangav.vscode-thunder-client",
-        "shardulm94.trailing-spaces",
-        "mosapride.zenkaku"
-      ]
+    "name": "LEMP Development",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "workspace",
+    "workspaceFolder": "/workspaces",
+    "mounts": [
+        "source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.ssh/,target=/home/vscode/.ssh/,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+    ],
+    "forwardPorts": [
+        8080,
+        3306,
+        9000
+    ],
+    "customizations": {
+        "vscode": {
+            "[php]": {
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+            },
+            "search.exclude": {
+                "**/node_modules": true,
+                "**/bower_components": true,
+                "**/*.code-search": true,
+                "**/vendor/*/**": true
+            },
+            "extensions": [
+                "xdebug.php-debug",
+                "bmewburn.vscode-intelephense-client",
+                "zobo.php-intellisense",
+                "neilbrayfield.php-docblocker",
+                "MehediDracula.php-namespace-resolver",
+                "onecentlin.laravel-blade",
+                "onecentlin.laravel5-snippets",
+                "ryannaddy.laravel-artisan",
+                "amiralizadeh9480.laravel-extra-intellisense",
+                "mikestead.dotenv",
+                "PKief.material-icon-theme",
+                "streetsidesoftware.code-spell-checker",
+                "cweijan.vscode-database-client2",
+                "donjayamanne.githistory",
+                "eamodio.gitlens",
+                "rangav.vscode-thunder-client",
+                "shardulm94.trailing-spaces",
+                "mosapride.zenkaku"
+            ]
+        }
     }
-  }
 }
