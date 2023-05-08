@@ -15,36 +15,56 @@
     ],
     "customizations": {
         "vscode": {
+            // インデントのサイズを4に設定し、ファイルに依存させない
+            "editor.tabSize": 4,
+            "editor.detectIndentation": false,
+
+            // ファイル保存時に自動でフォーマットを実行する
+            "editor.formatOnSave": true,
+
+            // Ctrl + scrollでフォントサイズを変更する
+            "editor.mouseWheelZoom": true,
+
+            //PHPのフォーマッターをIntelephenseに設定する
             "[php]": {
-                "editor.formatOnSave": true,
                 "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
             },
+
+            //VScodeに備わっているPHPの構文チェック・提案を無効にする(拡張機能と競合するため)
+            "php.validate.enable": false,
+            "php.suggest.basic": false,
+
+            //検索から除外(重くなるのを防ぐため)
             "search.exclude": {
                 "**/node_modules": true,
                 "**/bower_components": true,
                 "**/*.code-search": true,
                 "**/vendor/*/**": true
             },
+
+            //Vscodeの拡張機能
             "extensions": [
-                "xdebug.php-debug",
-                "bmewburn.vscode-intelephense-client",
-                "zobo.php-intellisense",
-                "neilbrayfield.php-docblocker",
-                "MehediDracula.php-namespace-resolver",
-                "onecentlin.laravel-blade",
-                "onecentlin.laravel5-snippets",
-                "ryannaddy.laravel-artisan",
-                "amiralizadeh9480.laravel-extra-intellisense",
-                "mikestead.dotenv",
-                "PKief.material-icon-theme",
-                "streetsidesoftware.code-spell-checker",
-                "cweijan.vscode-database-client2",
-                "donjayamanne.githistory",
-                "eamodio.gitlens",
-                "rangav.vscode-thunder-client",
-                "shardulm94.trailing-spaces",
-                "mosapride.zenkaku"
-            ]
+				"xdebug.php-debug",
+				"bmewburn.vscode-intelephense-client",
+				"zobo.php-intellisense",
+				"neilbrayfield.php-docblocker",
+				"MehediDracula.php-namespace-resolver",
+				"onecentlin.laravel-blade",
+				"onecentlin.laravel5-snippets",
+				"ryannaddy.laravel-artisan",
+				"amiralizadeh9480.laravel-extra-intellisense",
+				"mikestead.dotenv",
+				"PKief.material-icon-theme",
+				"streetsidesoftware.code-spell-checker",
+				"cweijan.vscode-database-client2",
+				"donjayamanne.githistory",
+				"eamodio.gitlens",
+				"rangav.vscode-thunder-client",
+				"shardulm94.trailing-spaces",
+				"mosapride.zenkaku",
+				"GitHub.copilot",
+				"yzhang.markdown-all-in-one"
+			]
         }
     }
 }
